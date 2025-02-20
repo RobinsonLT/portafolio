@@ -9,13 +9,21 @@
 
     <style>
         *{
-            width: 100;
+            width: 100%;
             margin: 0;
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
         html{
             background:#eae9ee;
 
+        }
+        .container-fluid{
+            width: 100%;
+        }
+        body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Evita el scroll horizontal si hay desbordamiento */
         }
         .foto{
             margin: 10px;
@@ -107,7 +115,7 @@
         <hr>
         <!--espacio para el menu-->
         <div class="row">
-            <div class="col-md-11 ms-5">
+            <div class="col-md-12">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Perfil</button>
