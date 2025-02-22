@@ -23,11 +23,10 @@
         }
         .foto{
             margin: 10px;
-            height:170px;
-            width: 160px;
             margin-left:40px;
             border-radius: 12px;
             background:#d8dbe0;
+            width:fit-content;
         }
         .row{
             padding: 0;
@@ -111,11 +110,10 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
         }
         .t_habilidad{
             font-size: x-large;
-            color: #fff;
-            background: rgb(237,115,14);
+            color: #098ebf;
             padding: 15px;
             margin: 0;
-            background: linear-gradient(99deg, rgba(237,115,14,1) 11%, rgba(234,233,238,1) 100%);
+            border-bottom: 3px solid #098ebf;
         }
         .blanco{
             background: #ffffff87;
@@ -124,6 +122,11 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
         }
         .d{
             background: #ffffff87;
+        }
+        .carta_sk:hover{
+            border:1px solid #d1d5da;
+            border-radius: 0;
+            background: #eae9ee;
         }
         .carta_sk{
             text-align: center;
@@ -136,20 +139,27 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
             font-family: 'FontAwesome';
             box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
         }
+        .fondogz1{
+            background: rgb(57,238,232);
+            background: linear-gradient(99deg, rgba(57,238,232,1) 11%, rgba(0,200,194,1) 100%);
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid menu">
         <div class="row encabezado">
-            <div class="col-md-2">
-                <div class="foto"></div>
+            <div class="col-md-2 d-flex justify-content-end">
+                <div class="foto">
+                    <img src="img/rb.jpeg" alt="" style="height:170px;width:130px;border-radius: 15px;padding:5px">
+                </div>
             </div>
             <div class="col-md-10">
                 <br><br>
                 <p class="title">Robinson Emanuel López Latín</p>
                 <div class="row">
                     <div class="col-md-3">
-                        <p class="texto"><i class="fa-solid fa-user-tie"></i> Desarrollador Web/Móvile</p>
+                        <p class="texto"><i class="fa-solid fa-user-tie"></i> Desarrollador Web/Móvile Jr</p>
                     </div>
                     <div class="col-md-3">
                         <p class="texto"><i class="fa-solid fa-location-dot"></i> Villa Nueva, Guatemala</p>
@@ -162,9 +172,9 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
                         <button type="button" id="cv" class="btn btn-xs btn-primary"><i class="fa-solid fa-download"></i> Descargar CV</button>
                         <a href="https://wa.me/50247518310" target="_blank" class="btn btn-success"><i class="fa-solid fa-comments"></i> WhatsApp</a>
-                        <button type="button" class="btn btn-info"><i class="fa-solid fa-phone"></i> Teléfono</button>
+                        <a href="tel:+50247518310" class="btn btn-info"><i class="fa-solid fa-phone"></i> Teléfono</a>
                         <button type="button" class="btn btn-dark"><i class="fa-brands fa-github"></i> GitHub</button>
-                        <button type="button" class="btn btn-danger"><span class="fa-solid fa-envelope"></span> Correo Electrónico</button>
+                        <a class="btn btn-danger" id="btn-mail"><span class="fa-solid fa-envelope"></span> Correo Electrónico</a>
                       </div>
                 </div>
             </div>
@@ -181,7 +191,7 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
                       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Habilidades</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Experiencias</button>
+                      <button class="nav-link" id="ex-tab" data-bs-toggle="tab" data-bs-target="#ex" type="button" role="tab" aria-controls="ex" aria-selected="false">Experiencias</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contacto</button>
@@ -359,11 +369,48 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
                                                 <img src="img/postman.png" alt="" style="width:128px;height:128px">
                                             </div>
                                         </div>
+                                        <div class="col-md-3">
+                                            <div class="carta_sk" style="color:#deaa1a">
+                                                <p>SQL, MySQL</p>
+                                                <img src="img/sql.png" alt="" style="width:128px;height:128px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="carta_sk" style="color:#e22d19">
+                                                <p style="font-size: medium;">Microsoft Office</p>
+                                                <img src="img/office.png" alt="" style="width:128px;height:128px">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--espacio para habilidades-->
+                    </div>
+                    <div class="tab-pane fade" id="ex" role="tabpanel" aria-labelledby="ex-tab">
+                        <!--Espacio para las experiencias-->
+                        <br>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    
+                                    <h2 style="font-family: emoji;">Inversiones Tú Mejor Resultado S.A</h2>
+                                    <p style="color:darkgoldenrod;font-size: xxx-large;margin-bottom: 0;">Desarrollador Web Jr <label style="color:#1a92d2;font-size: x-large;">(Full-Stack)</label></p>
+                                    <p style="font-size: x-large;">15 de Octubre del 2019  al  31 de Enero del 2025</p>
+                                </div>
+                                <div class="col-md-12 fondogz1">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img src="img/pggz.png" alt="" style="width: 80%;opacity: 0.4;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Espacio para las experiencias-->
                     </div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
                 </div>
@@ -376,6 +423,10 @@ background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
 
             $('#cv').click(function(){
                 window.location.href="files/CVRobinsonLopez.pdf";
+            });
+
+            $('#btn-mail').click(function(){
+                $('#contact-tab').trigger('click');
             });
 
         });
