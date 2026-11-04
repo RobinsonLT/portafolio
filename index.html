@@ -1,535 +1,298 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <title>Portafolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        
-        html{
-            background:#eae9ee;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Portafolio profesional de Robinson Emanuel López Latín, Desarrollador de Software en Guatemala.">
+  <title>Robinson López | Desarrollador de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{--bg:#080d19;--panel:#101a2c;--panel2:#131f34;--line:rgba(148,163,184,.16);--text:#edf3ff;--muted:#9aa9c0;--accent:#54a8ff;--accent2:#7c6cff;--green:#45d6b0}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 15% 0%,rgba(48,102,177,.18),transparent 36%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh}
+    h1,h2,h3,h4,.brand{font-family:'Space Grotesk',sans-serif} a{color:inherit;text-decoration:none} a:hover{color:var(--accent)}
+    .site-shell{max-width:1180px;margin:auto;padding:28px 22px 60px}.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}.brand{font-weight:700;letter-spacing:.03em;font-size:1.05rem}.brand span{color:var(--accent)}.status{color:var(--green);font-size:.82rem;display:flex;align-items:center;gap:8px}.status:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(20,35,59,.98),rgba(14,23,40,.96));border:1px solid var(--line);border-radius:26px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;box-shadow:0 24px 70px rgba(0,0,0,.22)}.hero:after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;right:-90px;top:-170px;background:rgba(84,168,255,.12);filter:blur(5px)}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.17em;font-size:.76rem;font-weight:700}.hero h1{font-size:clamp(2.2rem,5vw,3.65rem);font-weight:700;line-height:1.08;margin:12px 0}.hero h1 span{color:var(--accent)}.hero-copy{color:#b8c6dc;max-width:680px;line-height:1.75;margin:15px 0 24px}.hero-meta{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:.9rem}.hero-meta i{color:var(--accent);margin-right:7px}.hero-photo{position:relative;z-index:1;width:178px;height:178px;border-radius:28px;border:1px solid rgba(255,255,255,.2);padding:6px;background:linear-gradient(145deg,var(--accent),var(--accent2));box-shadow:0 16px 38px rgba(0,0,0,.35)}.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:22px;background:#1c2940}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn-primary-custom{background:linear-gradient(100deg,#398fe8,#7168ed);border:0;color:white;padding:11px 17px;border-radius:11px;font-weight:600}.btn-outline-custom{border:1px solid rgba(176,198,229,.28);color:var(--text);padding:10px 16px;border-radius:11px;font-weight:600}.btn-primary-custom:hover,.btn-outline-custom:hover{transform:translateY(-2px);color:#fff;filter:brightness(1.1)}
+    .tabs-wrap{margin:26px 0 20px;background:rgba(16,26,44,.8);border:1px solid var(--line);padding:8px;border-radius:16px;position:sticky;top:12px;z-index:20;backdrop-filter:blur(14px)}.nav-tabs{border:0;gap:6px}.nav-tabs .nav-link{border:0;border-radius:10px;color:var(--muted);padding:11px 17px;font-weight:600}.nav-tabs .nav-link:hover{color:var(--text);background:rgba(255,255,255,.05)}.nav-tabs .nav-link.active{background:linear-gradient(100deg,rgba(57,143,232,.22),rgba(113,104,237,.18));color:#fff;box-shadow:inset 0 0 0 1px rgba(84,168,255,.25)}.tab-content{min-height:440px}.section-heading{margin:10px 0 22px}.section-heading .eyebrow{margin-bottom:7px}.section-heading h2{font-size:1.8rem;font-weight:700;margin:0}.section-heading p{color:var(--muted);margin:8px 0 0}
+    .panel{background:linear-gradient(145deg,rgba(19,31,52,.96),rgba(14,24,41,.96));border:1px solid var(--line);border-radius:18px;padding:25px;height:100%}.panel h3{font-size:1.15rem;font-weight:700;margin-bottom:14px}.muted{color:var(--muted)}.profile-text{color:#c4d0e2;line-height:1.85}.tag{display:inline-flex;align-items:center;padding:7px 11px;border-radius:8px;background:rgba(84,168,255,.1);border:1px solid rgba(84,168,255,.17);color:#cfe5ff;font-size:.83rem;margin:4px 5px 4px 0}.skill-group{margin-bottom:20px}.skill-group:last-child{margin-bottom:0}.skill-group h4{font-size:.95rem;color:#dce8fa;margin-bottom:8px}.skill-group h4 i{color:var(--accent);width:22px}
+    .timeline{border-left:1px solid rgba(84,168,255,.4);margin-left:8px;padding-left:24px}.timeline-item{position:relative;padding-bottom:27px}.timeline-item:last-child{padding-bottom:0}.timeline-item:before{content:'';position:absolute;width:11px;height:11px;border-radius:50%;background:var(--accent);left:-30px;top:5px;box-shadow:0 0 0 5px rgba(84,168,255,.12)}.date{color:var(--accent);font-size:.82rem;font-weight:700;letter-spacing:.03em}.role{font-size:1.15rem;font-weight:700;margin:5px 0}.company{color:#c4d0e2;font-weight:600}.timeline ul{padding-left:19px;color:#aebdd2;line-height:1.7;margin:12px 0 0}.project-card{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:15px;padding:19px;height:100%;transition:.2s}.project-card:hover{transform:translateY(-4px);border-color:rgba(84,168,255,.5)}.project-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(84,168,255,.13);color:var(--accent);font-size:1.1rem;margin-bottom:14px}.project-card h3{font-size:1.05rem}.project-card p{color:var(--muted);font-size:.92rem;line-height:1.65;margin:0}.course{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}.course:last-child{border:0}.course i{color:var(--accent);font-size:1.15rem;margin-top:3px}.course strong{display:block}.course small{color:var(--muted)}.education-item{padding:15px 0;border-bottom:1px solid var(--line)}.education-item:last-child{border:0}.education-item .date{float:right}.contact-link{display:flex;align-items:center;gap:13px;padding:15px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid var(--line);margin-bottom:10px}.contact-link i{width:22px;text-align:center;color:var(--accent)}.form-control{background:#0b1424;border:1px solid var(--line);color:var(--text);padding:12px}.form-control:focus{background:#0b1424;color:var(--text);border-color:var(--accent);box-shadow:0 0 0 .2rem rgba(84,168,255,.12)}.form-control::placeholder{color:#71819a}.footer{border-top:1px solid var(--line);margin-top:35px;padding-top:20px;color:#7889a3;font-size:.84rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:767px){.site-shell{padding:18px 13px 40px}.hero{grid-template-columns:1fr;padding:27px 22px}.hero-photo{grid-row:1;width:116px;height:116px;border-radius:20px}.hero-photo img{border-radius:15px}.hero h1{font-size:2.35rem}.tabs-wrap{top:5px;overflow-x:auto}.nav-tabs{flex-wrap:nowrap;min-width:max-content}.nav-tabs .nav-link{padding:10px 12px;font-size:.88rem}.panel{padding:20px}.hero-meta{gap:10px 16px}}
+  
+    /* Rediseño minimalista: conserva la identidad visual original */
+    :root{
+      --bg:#eae9ee;--panel:#ffffff;--panel2:#f7f8fa;
+      --line:#e2e5e9;--text:#30343b;--muted:#737b84;
+      --accent:#098ebf;--accent2:#009688;--green:#269b78;
+    }
+    body{
+      background:#eae9ee;color:#30343b;
+      font-family:'DM Sans',Arial,sans-serif;
+    }
+    a:hover{color:#098ebf}
+    .site-shell{max-width:1180px;padding-top:24px}
+    .topbar{color:#626a73}
+    .brand span{color:#009688}
+    .status{color:#258c70}
+    .status:before{box-shadow:none}
+    .hero{
+      background:linear-gradient(135deg,#494949 0%,#55585d 76%,#777d83 100%);
+      border:0;border-radius:12px;padding:38px;
+      box-shadow:0 8px 24px rgba(40,45,50,.12);
+    }
+    .hero:after{
+      width:270px;height:270px;right:-80px;top:-150px;
+      background:rgba(255,255,255,.13);filter:blur(28px);
+    }
+    .eyebrow{color:#38c2b5;letter-spacing:.12em}
+    .hero h1{color:#fff}
+    .hero h1 span{color:#55c9bd}
+    .hero-copy{color:#e0e2e5}
+    .hero-meta{color:#d0d3d7}
+    .hero-meta i{color:#55c9bd}
+    .hero-photo{
+      border:2px solid rgba(255,255,255,.72);padding:4px;
+      background:rgba(255,255,255,.18);box-shadow:0 8px 22px rgba(0,0,0,.18);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    }
+    .hero-photo img{background:#e6e8eb}
+    .btn-primary-custom{
+      background:#098ebf;color:#fff;border:0;border-radius:8px;
+      box-shadow:none;
+    }
+    .btn-primary-custom:hover{background:#087da8;color:#fff}
+    .btn-outline-custom{
+      border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:8px;
+    }
+    .btn-outline-custom:hover{background:rgba(255,255,255,.12);color:#fff}
+    .tabs-wrap{
+      background:rgba(255,255,255,.78);border:1px solid rgba(210,214,220,.8);
+      border-radius:10px;padding:6px;box-shadow:0 4px 14px rgba(40,45,50,.07);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    }
+    .nav-tabs .nav-link{color:#737b84;border-radius:7px}
+    .nav-tabs .nav-link:hover{color:#30343b;background:#f0f3f5}
+    .nav-tabs .nav-link.active{
+      background:#e5f3f2;color:#087f77;
+      box-shadow:inset 0 -2px 0 #009688;
+    }
+    .section-heading h2{color:#343a40}
+    .section-heading p,.muted{color:#737b84}
+    .panel{
+      background:#fff;border:1px solid #e2e5e9;border-radius:12px;
+      box-shadow:0 3px 12px rgba(40,45,50,.055);
+    }
+    .panel h3,.skill-group h4{color:#343a40}
+    .profile-text{color:#59616a}
+    .tag{
+      background:#eef7f6;border:1px solid #d7ece9;color:#267d76;
+      border-radius:6px;
+    }
+    .skill-group h4 i{color:#009688}
+    .project-icon{background:#e8f4f3;color:#07877f}
+    .project-card:hover{border-color:#9bd4ce;box-shadow:0 7px 18px rgba(40,90,85,.08)}
+    .course i{color:#098ebf}
+    .timeline{border-left:1px solid #b9d9d5}
+    .timeline-item:before{background:#009688;box-shadow:0 0 0 4px #e5f3f1}
+    .date{color:#07877f}
+    .contact-link i{color:#009688}
+    .footer{color:#858c94}
+    @media(max-width:767px){
+      .hero{padding:26px 22px;border-radius:10px}
+      .hero-photo{width:132px;height:132px}
+      .tabs-wrap{top:6px}
+    }
 
-        }
-        .container-fluid{
-            width: 100%;
-        }
-        body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Evita el scroll horizontal si hay desbordamiento */
-        }
-        .foto{
-            margin: 10px;
-            margin-left:40px;
-            border-radius: 12px;
-            background:url('img/robinson.jpeg')no-repeat;
-            height:170px;
-            width:130px;
-            border:3px solid #9e9e9e;
-            background-size: cover;
-            border-radius: 15px;
-        }
-        .row{
-            padding: 0;
-        }
-        .encabezado{
-            margin:0;
-            height:fit-content;
-            background: rgb(73,73,73);
-background: linear-gradient(135deg, rgba(73,73,73,1) 77%, #9e9e9e 100%);;
-        }
-        .tab-content, .tab-pane{
-            background: transparent;
-        }
-        .nav-tabs .nav-link.active {
-            color: #495057;
-            font-weight: bold;
-            font-size: medium;
-            background-color: #fff;
-            border-color: #dee2e6 #dee2e6 #fff;
-            border-bottom: 4px solid #333;
-        }
-        .nav-tabs .nav-link {
-            margin-bottom: -1px;
-            background: 0 0;
-            color:#86898d;
-            border: 1px solid transparent;
-            border-top-left-radius: .25rem;
-            border-top-right-radius: .25rem;
-            margin-bottom: 2px;
-        }
-        .contenido{
-            background:#eae9ee;
-        }
-        .fondo{
-            background:#eae9ee;
-        }
-        .title{
-            margin:0;
-            font-size: x-large;
-            font-family: sans-serif;
-            font-weight: 500;
-            color:#fff;
-        }
-        .title2{
-            margin:0;
-            font-size: x-large;
-            font-family: sans-serif;
-            font-weight: 700;
-            color:#333333bf;
-        }
-        .carta{
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-        .menu{
-            padding:0;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-        hr{
-            margin: 0;
-            margin-bottom: 4px;
-            color: #86898d;
-        }
-        .texto{
-            color: #b4aba8;
-            margin:none;
-        }
-        .nav-menu{
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-        .idn{
-            width: 100%;
-        }
-        .presentation{
-            text-align: justify;
-        }
-        .text-justify {
-        text-align: justify;
-        }
-        .t_habilidad{
-            font-size: x-large;
-            color: #098ebf;
-            padding: 15px;
-            margin: 0;
-            border-bottom: 3px solid #098ebf;
-        }
-        .blanco{
-            background: #ffffff87;
-            padding: 5px;
-            border-radius: 8px;
-        }
-        .d{
-            background: #ffffff87;
-        }
-        .carta_sk:hover{
-            border:1px solid #d1d5da;
-            border-radius: 0;
-            background: #eae9ee;
-        }
-        .carta_sk{
-            text-align: center;
-            color: #fff;
-            background: #fff;
-            margin: 8px;
-            padding-bottom: 12px;
-            border-radius: 10px;
-            font-size: larger;
-            font-family: 'FontAwesome';
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-        }
-        .fondogz1{
-            background: #fff;
-            padding: 5px;
-        }
-        .titulo_experiencia{
-            color:#009688;border-bottom: 2px solid #009688;font-size: xx-large;font-family: sans-serif
-        }
-        .lista_esperiencia{
-            background: transparent !important;
-            color:#009688;
 
-        }
-        .empresa{
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 19px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        
-        }
-    </style>
+    /* Formulario de contacto: limpio, moderno y coherente con el diseño original */
+    .contact-form-panel{padding:28px}
+    .contact-form-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:25px}
+    .contact-form-heading h3{font-size:1.28rem;margin:9px 0 5px}
+    .contact-kicker{font-size:.7rem;font-weight:700;letter-spacing:.13em;color:#009688}
+    .contact-form-icon{width:46px;height:46px;flex:0 0 46px;border-radius:13px;background:#e8f5f4;color:#009688;display:grid;place-items:center;font-size:1.1rem}
+    .contact-form-panel .form-label{font-size:.88rem;font-weight:600;color:#454c54;margin-bottom:8px}
+    .field-wrap{position:relative}
+    .field-wrap>i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#89939c;z-index:2;font-size:.9rem}
+    .field-wrap .form-control{background:#f8f9fa;border:1px solid #e1e5e9;border-radius:9px;color:#30343b;padding:12px 14px 12px 40px;min-height:48px;transition:border-color .2s,box-shadow .2s}
+    .field-wrap .form-control:focus{background:#fff;color:#30343b;border-color:#009688;box-shadow:0 0 0 3px rgba(0,150,136,.10)}
+    .field-wrap .form-control::placeholder{color:#a0a8b0}
+    .field-wrap-textarea>i{top:17px;transform:none}
+    .field-wrap textarea.form-control{min-height:132px;resize:vertical;padding-top:13px}
+    .form-note{font-size:.78rem;color:#858e97}
+    .form-note i{color:#009688}
+    .contact-submit{width:auto;padding:12px 19px;border-radius:9px;font-size:.9rem}
+    @media(max-width:575px){.contact-form-panel{padding:21px}.contact-form-heading{margin-bottom:20px}.contact-submit{width:100%}}
+
+  </style>
 </head>
 <body>
-    <div class="container-fluid menu">
-        <div class="row encabezado">
-            <div class="col-md-2 d-flex justify-content-center">
-                <div class="foto">
-                </div>
-            </div>
-            <div class="col-md-10">
-                <br><br>
-                <p class="title">Robinson Emanuel López Latín</p>
-                <div class="row">
-                    <div class="col-md-3">
-                        <p class="texto"><i class="fa-solid fa-user-tie"></i> Desarrollador Web/Móvile Jr</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p class="texto"><i class="fa-solid fa-location-dot"></i> Villa Nueva, Guatemala</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p class="texto"><span class="fa-solid fa-envelope"></span> robinsonelatin@gmail.com</p>
-                    </div>
-                </div>
-                <div class="col-md-10">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
-                        <button type="button" id="cv" class="btn btn-xs btn-primary"><i class="fa-solid fa-download"></i> Descargar CV</button>
-                        <a href="https://wa.me/50247518310" target="_blank" class="btn btn-success"><i class="fa-solid fa-comments"></i> WhatsApp</a>
-                        <a href="tel:+50247518310" class="btn btn-info"><i class="fa-solid fa-phone"></i> Teléfono</a>
-                        <button type="button" class="btn btn-dark"><i class="fa-brands fa-github"></i> GitHub</button>
-                        <a class="btn btn-danger" id="btn-mail"><span class="fa-solid fa-envelope"></span> Correo Electrónico</a>
-                      </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <!--espacio para el menu-->
-        <div class="row nav-menu">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Perfil</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Habilidades</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="ex-tab" data-bs-toggle="tab" data-bs-target="#ex" type="button" role="tab" aria-controls="ex" aria-selected="false">Experiencias</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contacto</button>
-                      </li>
-                  </ul>
-            </div>
-        </div>
-        <!--espacio para el menu-->
+  <main class="site-shell">
+    <div class="topbar">
+      <a class="brand" href="#inicio">RL<span>.</span></a>
+      <div class="status">Desarrollador de Software</div>
     </div>
-    <div class="container-fluid">
-        <div class="row fondo p-0">
-            <div class="col-md-12">
-                <div class="tab-content fondo" id="myTabContent">
-                    <div class="tab-pane fade show active fondo" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <!--espacio para el perfil-->
-                        <br><br>
-                        <div class="container carta">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <br>
-                                    <img src="img/foto_perfil.jpg" class="idn">
-                                </div>
-                                <div class="col-md-4">
-                                    <br>
-                                    <p class="title2">Hola! mi nombre es Robinson y tengo 22 años.</p>
-                                    <p class="card-subtitle mb-2 text-muted text-justify">Estudiante de Ingeniería en Sistemas y Ciencias de la Computación, con experiencia de 5 años en
-                                        el desarrollo de sistemas y soporte técnico. Competente en base de datos relacionales (SQL, SQL
-                                        Server). Dominio de las herramientas como: PHP, HTML5, CSS3, Java, JavaScript, Jquery,
-                                        AngularJS, Bootstrap 5, Material Design, Flutter, Ingles básico (B3), GitHub. con habilidad en el
-                                        manejo y creación de APis REST e implementación de Ajax para la mejora en la interacción con los
-                                        sistemas, familiarizado con metodologías agiles como SCRUM.</p>
-                                        
-                                </div>
-                                <div class="col-md-5">
-                                    <p class="title2">CERTIFICACIONES Y CURSOS</h2>
-                                    <ol class="list-group list-group-numbered">
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                                            <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Curso libre de Técnico Operador en Computación, centro de computación COMPUMARKET</div>
-                                            Introducción a la Informática, Redes e Internet y paquete Microsoft Office
-                                            </div>
-                                            <span class="badge bg-primary rounded-pill"></span>
-                                        </li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                                            <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Curso libre de Programador Analista, centro de computación COMPUMARKET</div>
-                                            Phyton, Visual Basic, Java, PHP, Desarrollo Web (Html5, CSS, AngularJs).
-                                            </div>
-                                            <span class="badge bg-primary rounded-pill"></span>
-                                        </li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                                            <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Gestión de Datos en Excel y Tablas Dinámicas, Camara de comercio y Capacitación Internacional.</div>
-                                            </div>
-                                            <span class="badge bg-primary rounded-pill"></span>
-                                        </li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                                            <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Curso de Ingles (B3), academia de ingles E4CC.
-                                            </div>
-                                            </div>
-                                            <span class="badge bg-primary rounded-pill"></span>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                        <!--espacio para el perfil-->
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <!--espacio para habilidades-->
-                        <div class="container-fluid p-0">
-                            <div class="row">
-                                <div class="col-md-5 p-0">
-                                    <br>
-                                    <p class="t_habilidad ps-5">
-                                        <i class="fa-solid fa-gears"></i> Habilidades y Tecnologías
-                                    </p>
-                                    <ul class="list-group">
-                                        <li class="list-group-item d"><strong>Base de datos:</strong> SQL (Intermedio)</li>
-                                        <li class="list-group-item d"><strong>Desarrollo de Software:</strong> PHP, Flutter, HTML, CSS, AngularJS, jQuery, Bootstrap 5, Java</li>
-                                        <li class="list-group-item d"><strong>Soporte técnico:</strong> Hardware y software</li>
-                                        <li class="list-group-item d"><strong>Idiomas:</strong> Español (Nativo), Inglés Básico (B3)</li>
-                                        <li class="list-group-item d"><strong>Metodologías Ágiles:</strong> SCRUM</li>
-                                        <li class="list-group-item d"><strong>Arquitectura:</strong> MVC</li>
-                                        <li class="list-group-item d"><strong>Control de versiones:</strong> Git y GitHub</li>
-                                    </ul>
-                                    <br>
-                                    <p class="t_habilidad ps-5">
-                                        <i class="fa-solid fa-graduation-cap"></i> Educación Académica
-                                    </p>
-                                    <div class="d-flex justify-content-between blanco">
-                                        <div>
-                                            <strong>Ingeniería en Sistemas de Información y Ciencias de la Computación</strong>
-                                            <p class="mb-1">Quinto semestre cursando actualmente 2025</p>
-                                            <p class="text-muted">Universidad Mariano Gálvez de Guatemala</p>
-                                        </div>
-                                        <div class="text-end">
-                                            <strong>Feb 2022 - Actualidad</strong>
-                                        </div>
-                                    </div>
-                            
-                                    <hr>
-                            
-                                    <div class="d-flex justify-content-between blanco">
-                                        <div>
-                                            <strong>Bachillerato en Computación con Orientación Científica</strong>
-                                            <p class="text-muted">Liceo Compu-Market, Villa Nueva</p>
-                                        </div>
-                                        <div class="text-end">
-                                            <strong>Ene 2018 - Oct 2019</strong>
-                                        </div>
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#dd512a">
-                                                <p>HTML 5</p>
-                                                <img src="img/html5.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#ead40f">
-                                                <p>JavaScript</p>
-                                                <img src="img/js.png" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#1a92d2">
-                                                <p>CSS 3</p>
-                                                <img src="img/css-3.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#6a1ad2">
-                                                <p>Bootstrap 5</p>
-                                                <img src="img/bootstrap.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#1a64d2">
-                                                <p>jQuery</p>
-                                                <img src="img/jquery.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#ad2323">
-                                                <p>AngularJS</p>
-                                                <img src="img/angular.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#777ab4">
-                                                <p>PHP</p>
-                                                <img src="img/php.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#de481a">
-                                                <p>Java</p>
-                                                <img src="img/java.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#333">
-                                                <p>Github</p>
-                                                <img src="img/github.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#de481a">
-                                                <p>Postman</p>
-                                                <img src="img/postman.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#deaa1a">
-                                                <p>SQL, MySQL</p>
-                                                <img src="img/sql.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="carta_sk" style="color:#e22d19">
-                                                <p style="font-size: medium;">Microsoft Office</p>
-                                                <img src="img/office.png" alt="" style="width:128px;height:128px">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--espacio para habilidades-->
-                    </div>
-                    <div class="tab-pane fade" id="ex" role="tabpanel" aria-labelledby="ex-tab">
-                        <!--Espacio para las experiencias-->
-                        <br>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row empresa">
-                                        <div class="col-md-3 d-flex justify-content-center">
-                                            <a href="https://www.mejorresultado.com/dominios/"><img src="img/tmr.png" alt="" width="220px"></a>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <br>
-                                            <p style="color:darkgoldenrod;font-size: x-large;margin-bottom: 0;">Desarrollador Web Jr <label style="color:#1a92d2;font-size: large;">(Full-Stack)</label></p>
-                                            <div class="d-flex justify-content-start">
-                                                <p style="font-family: emoji;font-size: x-medium;">Inversiones Tú Mejor Resultado S.A | </p>
-                                                <p style="font-size: x-medium;">15 de Octubre del 2019  al  31 de Enero del 2025</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="alert alert-warning" role="alert">
-                                                Implemente reportes que optimizaron la visualización de datos de ventas, expedientes, compras
-                                              </div>
-                                        </div>
-                                       
-                                        <div class="col-md-6">
-                                            <div class="alert alert-primary" role="alert">
-                                                Implemente actualizaciones en el CRM que optimizaron la atención y el control de actividades.
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="alert alert-success" role="alert">
-                                                Reduje el tiempo de implementación de los sistemas un 50% mediante la importación de datos
-                                                masiva.
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="alert alert-secondary" role="alert">
-                                                Desarrolle la Aplicación móvil para facturación logrando un 20% de aumento en el interés del sistema.
-                                              </div>
-                                        </div>
-                                        
-                                    </div>    
-                                </div>
-                                <div class="col-md-12 fondogz1">
-                                    <div class="row mb-1">
-                                        <div class="col-md-6 pt-2 ps-5">
-                                            <h3 class="titulo_experiencia" >Funciones </h3>
-                                            <ul class="list-group list-group-flush ">
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Desarrollo de Modulos y actualizaciónes</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Optimizar procesos logísticos y de distribución para mejorar la eficiencia y servicio al cliente</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> creación de reportes</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Creación de ApiRest en lenguaje PHP con experiencia en arquitectura MVC</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Diseño de vistas (Frontend)</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Manejo de base de datos relacionales</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Creación de Aplicación Móvil en Flutter con experiencia en lectura de ApiRest e impresión termica ESC/POST, SUNMI</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Realizar mantenimiento preventivo y correctivo de infraestructura tecnológica.</li>
-                                                <li class="list-group-item lista_esperiencia"><i class="fa-regular fa-circle-dot"></i> Control de versiones en Github.</li>
-                                              </ul>
-                                        </div>
-                                        <div class="col-md-6 pt-4 mt-5 d-flex justify-content-center">
-                                            <img src="img/comercio.jpg" alt="" style="width: 80%;opacity: 0.4;">
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <!--Espacio para las experiencias-->
-                    </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <!--espacio para el contacto-->
-                        <div class="container mt-5">
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 pb-5 carta " >
-                                    <h2 class="text-center mb-4">Contacto</h2>
-                                    <form action="send_email.php" method="POST">
-                                        <div class="mb-3">
-                                            <label for="name" class="form-label">Asunto</label>
-                                            <input type="text" class="form-control" id="name" name="name" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Correo Electrónico</label>
-                                            <input type="email" class="form-control" id="email" name="email" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="message" class="form-label">Mensaje</label>
-                                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <button type="button" id="enviar" class="btn btn-primary w-100">Enviar</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div><br><br>
-                        <!--espacio para el contacto-->
-                    </div>
-                </div>
-            </div>
+
+    <section class="hero" id="inicio">
+      <div>
+        <div class="eyebrow">Portafolio profesional</div>
+        <h1>Robinson Emanuel<br><span>López Latín</span></h1>
+        <p class="hero-copy">Desarrollador de Software con experiencia en análisis, diseño, desarrollo, mantenimiento y optimización de sistemas empresariales. Trabajo en soluciones backend y frontend, integración de APIs, automatización de procesos y gestión de bases de datos.</p>
+        <div class="hero-meta">
+          <span><i class="fa-solid fa-location-dot"></i>Villa Nueva, Guatemala</span>
+          <span><i class="fa-solid fa-envelope"></i>robinsonelatin@gmail.com</span>
         </div>
+        <div class="actions">
+          <a class="btn-primary-custom" href="files/CVRobinsonLopez.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-download me-2"></i>Descargar CV</a>
+          <a class="btn-outline-custom" href="https://wa.me/50247518310" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Contactar</a>
+          <a class="btn-outline-custom" href="https://github.com/robinsonlt" target="_blank" rel="noopener"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+        </div>
+      </div>
+      <div class="hero-photo"><img src="img/foto_perfil.jpg" alt="Fotografía de Robinson López" onerror="this.style.display='none'"></div>
+    </section>
+
+    <div class="tabs-wrap">
+      <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+        <li class="nav-item"><button class="nav-link active" id="perfil-tab" data-bs-toggle="tab" data-bs-target="#perfil" type="button" role="tab"><i class="fa-regular fa-user me-2"></i>Perfil</button></li>
+        <li class="nav-item"><button class="nav-link" id="habilidades-tab" data-bs-toggle="tab" data-bs-target="#habilidades" type="button" role="tab"><i class="fa-solid fa-code me-2"></i>Habilidades</button></li>
+        <li class="nav-item"><button class="nav-link" id="experiencia-tab" data-bs-toggle="tab" data-bs-target="#experiencia" type="button" role="tab"><i class="fa-solid fa-briefcase me-2"></i>Experiencia</button></li>
+        <li class="nav-item"><button class="nav-link" id="formacion-tab" data-bs-toggle="tab" data-bs-target="#formacion" type="button" role="tab"><i class="fa-solid fa-graduation-cap me-2"></i>Formación</button></li>
+        <li class="nav-item"><button class="nav-link" id="contacto-tab" data-bs-toggle="tab" data-bs-target="#contacto" type="button" role="tab"><i class="fa-regular fa-paper-plane me-2"></i>Contacto</button></li>
+      </ul>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function(){
 
-            $('#cv').click(function(){
-                window.location.href="files/CVRobinsonLopez.pdf";
-            });
+    <div class="tab-content" id="portfolioTabContent">
+      <section class="tab-pane fade show active" id="perfil" role="tabpanel" aria-labelledby="perfil-tab" tabindex="0">
+        <div class="section-heading"><div class="eyebrow">Conóceme</div><h2>Perfil profesional</h2><p>Experiencia construyendo y mejorando soluciones de software.</p></div>
+        <div class="row g-3">
+          <div class="col-lg-7"><div class="panel"><h3>Sobre mí</h3><p class="profile-text">Desarrollador de Software con experiencia en análisis, diseño, desarrollo, mantenimiento y optimización de sistemas empresariales. Con conocimientos en desarrollo backend y frontend, integración de APIs REST y SOAP, automatización de procesos y gestión de bases de datos relacionales. Experiencia trabajando con Node.js, Express.js, JavaScript, PHP, Java, AngularJS, jQuery y Flutter, así como con SQL Server y MySQL. Manejo de herramientas para el desarrollo y despliegue de aplicaciones en entornos Docker. Familiarizado con metodologías ágiles como Scrum y seguimiento de actividades en Jira. Actualmente fortaleciendo conocimientos en .NET y C#.</p></div></div>
+          <div class="col-lg-5"><div class="panel"><h3>Enfoque tecnológico</h3><div><span class="tag">Backend</span><span class="tag">Frontend</span><span class="tag">APIs REST / SOAP</span><span class="tag">SQL</span><span class="tag">Automatización</span><span class="tag">Docker</span><span class="tag">Scrum</span><span class="tag">MVC</span></div><hr class="my-4" style="border-color:var(--line)"><h3>Objetivo profesional</h3><p class="muted mb-0" style="line-height:1.75">Participar en el desarrollo de soluciones tecnológicas, aportando experiencia en sistemas empresariales, integración de servicios y optimización de procesos.</p></div></div>
+        </div>
+        <div class="section-heading mt-4"><div class="eyebrow">Trabajo destacado</div><h2>Áreas de experiencia</h2></div>
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-3"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>Sistemas empresariales</h3><p>Desarrollo y mantenimiento de módulos para atender procesos y necesidades de distintas áreas operativas.</p></div></div>
+          <div class="col-md-6 col-xl-3"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-code-branch"></i></div><h3>Integración de servicios</h3><p>Creación e integración de APIs REST y SOAP para intercambio de información entre sistemas.</p></div></div>
+          <div class="col-md-6 col-xl-3"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-database"></i></div><h3>Datos y reportería</h3><p>Consultas SQL, optimización de información, procesos masivos y reportería empresarial.</p></div></div>
+          <div class="col-md-6 col-xl-3"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-gears"></i></div><h3>Automatización</h3><p>Automatización de tareas y validaciones para mejorar procesos y reducir trabajo manual.</p></div></div>
+        </div>
+      </section>
 
-            $('#btn-mail').click(function(){
-                $('#contact-tab').trigger('click');
-            });
+      <section class="tab-pane fade" id="habilidades" role="tabpanel" aria-labelledby="habilidades-tab" tabindex="0">
+        <div class="section-heading"><div class="eyebrow">Stack tecnológico</div><h2>Habilidades y tecnologías</h2><p>Herramientas y conocimientos utilizados en desarrollo de software.</p></div>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="panel">
+            <div class="skill-group"><h4><i class="fa-solid fa-server"></i>Backend y servicios</h4><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">PHP</span><span class="tag">Java</span><span class="tag">APIs REST</span><span class="tag">APIs SOAP</span><span class="tag">Sequelize ORM</span></div>
+            <div class="skill-group"><h4><i class="fa-solid fa-display"></i>Frontend</h4><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">AngularJS</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap 5</span><span class="tag">Materialize CSS</span><span class="tag">AJAX</span></div>
+            <div class="skill-group"><h4><i class="fa-solid fa-mobile-screen"></i>Desarrollo móvil</h4><span class="tag">Flutter</span></div>
+          </div></div>
+          <div class="col-md-6"><div class="panel">
+            <div class="skill-group"><h4><i class="fa-solid fa-database"></i>Bases de datos</h4><span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">SQL</span></div>
+            <div class="skill-group"><h4><i class="fa-solid fa-screwdriver-wrench"></i>Herramientas</h4><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Playwright</span><span class="tag">Postman</span><span class="tag">Jira</span></div>
+            <div class="skill-group"><h4><i class="fa-solid fa-layer-group"></i>Arquitectura y metodologías</h4><span class="tag">MVC</span><span class="tag">Scrum</span></div>
+            <div class="skill-group"><h4><i class="fa-solid fa-book-open"></i>En formación</h4><span class="tag">.NET</span><span class="tag">C#</span></div>
+          </div></div>
+        </div>
+      </section>
 
-            $('#enviar').click(function(){
-                let email=$("#email").val();
-                let name=$("#name").val()+' | '+email;
-                let message=$("#message").val();
-                let destinatario='robinsonelatin@gmail.com';
+      <section class="tab-pane fade" id="experiencia" role="tabpanel" aria-labelledby="experiencia-tab" tabindex="0">
+        <div class="section-heading"><div class="eyebrow">Trayectoria</div><h2>Experiencia profesional</h2><p>Experiencia en desarrollo de sistemas y soluciones empresariales.</p></div>
+        <div class="panel"><div class="timeline">
+          <article class="timeline-item">
+            <div class="date">10 MAR 2025 — 03 OCT 2026</div><div class="role">Desarrollador de Software</div><div class="company">Cooperativa UPA, R.L. <span class="muted fw-normal">· Institución financiera de ahorro y crédito</span></div>
+            <ul><li>Desarrollo y mantenimiento de módulos empresariales en el sistema interno, atendiendo requerimientos de diferentes áreas operativas.</li><li>Implementación de procesos de cobranza, remesas y gestión de solicitudes de crédito mediante reglas de negocio y flujos de trabajo.</li><li>Desarrollo de APIs REST, SOAP, servicios backend e interfaces web.</li><li>Gestión y optimización de bases de datos, consultas SQL, importación y exportación masiva de información y reportería del Data Warehouse.</li><li>Implementación de controles de seguridad, validaciones mediante listas negras y trabajo con aplicaciones contenerizadas en Docker.</li></ul>
+            <h4 class="mt-4 mb-2" style="font-size:.95rem">Logros destacados</h4><ul><li>Desarrollé un flujo integral de cobranza para el seguimiento de deudores, gestiones de contacto, metas y montos recuperados.</li><li>Implementé el módulo de remesas para procesar cobros de distintos convenios empresariales.</li><li>Implementé mecanismos de validación de listas negras en los distintos módulos del sistema interno y desarrollé consultas al Buró de Crédito para verificar registros a nivel nacional.</li><li>Implementé herramientas de importación, exportación masiva y reportería para optimizar la gestión de información.</li></ul>
+          </article>
+          <article class="timeline-item">
+            <div class="date">15 OCT 2019 — 31 ENE 2025</div><div class="role">Desarrollador Web Jr. <span style="color:var(--accent)">(Full-Stack)</span></div><div class="company">Inversiones Tu Mejor Resultado S. A.</div>
+            <ul><li>Desarrollo de módulos, reportes, soluciones de comercio electrónico, aplicaciones móviles y automatizaciones.</li><li>Gestión y automatización del sistema de control de inventario y facturación.</li><li>Análisis de datos logísticos y optimización de procesos de distribución.</li><li>Mantenimiento preventivo y correctivo de infraestructura tecnológica.</li></ul>
+            <h4 class="mt-4 mb-2" style="font-size:.95rem">Logros destacados</h4><ul><li>Reduje un 50% el tiempo de implementación de sistemas mediante la importación masiva de datos.</li><li>Implementé actualizaciones en el CRM que optimizaron la atención y el control de actividades.</li><li>Desarrollé reportes para mejorar la visualización de datos de ventas, expedientes y compras.</li><li>Desarrollé una aplicación móvil de facturación que incrementó en un 20% el interés en el sistema.</li></ul>
+          </article>
+        </div></div>
+        <div class="section-heading mt-4"><div class="eyebrow">Soluciones desarrolladas</div><h2>Proyectos y funcionalidades</h2><p>Ejemplos de soluciones implementadas durante mi trayectoria profesional.</p></div>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div><h3>Flujo de gestión de cobranza</h3><p>Proceso para registrar gestiones de contacto, dar seguimiento a deudores y consultar metas y montos recuperados.</p></div></div>
+          <div class="col-md-6"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-money-bill-transfer"></i></div><h3>Módulo de remesas</h3><p>Funcionalidad para procesar cobros provenientes de distintos convenios empresariales.</p></div></div>
+          <div class="col-md-6"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Validaciones de seguridad</h3><p>Integración de validaciones de listas negras y consultas al Buró de Crédito dentro de los procesos del sistema.</p></div></div>
+          <div class="col-md-6"><div class="project-card"><div class="project-icon"><i class="fa-solid fa-file-import"></i></div><h3>Procesamiento de información</h3><p>Herramientas de importación y exportación masiva de datos, consultas y reportería empresarial.</p></div></div>
+        </div>
+      </section>
 
-                location.href=`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(destinatario)}&su=${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
-            });
+      <section class="tab-pane fade" id="formacion" role="tabpanel" aria-labelledby="formacion-tab" tabindex="0">
+        <div class="section-heading"><div class="eyebrow">Formación académica</div><h2>Educación, cursos y certificaciones</h2><p>Formación académica y aprendizaje continuo.</p></div>
+        <div class="row g-3">
+          <div class="col-lg-6"><div class="panel"><h3><i class="fa-solid fa-graduation-cap me-2" style="color:var(--accent)"></i>Educación</h3>
+            <div class="education-item"><span class="date">FEB 2022 — ACTUALIDAD</span><strong>Ingeniería en Sistemas de Información y Ciencias de la Computación</strong><div class="muted mt-1">Sexto semestre · Universidad Mariano Gálvez de Guatemala</div></div>
+            <div class="education-item"><span class="date">ENE 2018 — OCT 2019</span><strong>Bachillerato en Computación con Orientación Científica</strong><div class="muted mt-1">Liceo Compu-Market, Villa Nueva</div></div>
+          </div></div>
+          <div class="col-lg-6"><div class="panel"><h3><i class="fa-solid fa-certificate me-2" style="color:var(--accent)"></i>Cursos y certificaciones</h3>
+            <div class="course"><i class="fa-solid fa-laptop-code"></i><div><strong>Técnico Operador en Computación</strong><small>COMPUMARKET · Informática, redes, Internet y Microsoft Office.</small></div></div>
+            <div class="course"><i class="fa-solid fa-code"></i><div><strong>Programador Analista</strong><small>COMPUMARKET · Python, Visual Basic, Java, PHP y desarrollo web.</small></div></div>
+            <div class="course"><i class="fa-solid fa-language"></i><div><strong>Inglés B3</strong><small>Academia de inglés E4CC.</small></div></div>
+            <div class="course"><i class="fa-solid fa-book-open"></i><div><strong>.NET y C#</strong><small>Formación en curso.</small></div></div>
+          </div></div>
+        </div>
+      </section>
 
-        });
-    </script>
+      <section class="tab-pane fade" id="contacto" role="tabpanel" aria-labelledby="contacto-tab" tabindex="0">
+        <div class="section-heading"><div class="eyebrow">Hablemos</div><h2>Contacto</h2><p>Estoy disponible para conversar sobre oportunidades y proyectos de desarrollo.</p></div>
+        <div class="row g-3">
+          <div class="col-lg-5"><div class="panel"><h3>Mis canales</h3>
+            <a class="contact-link" href="mailto:robinsonelatin@gmail.com"><i class="fa-solid fa-envelope"></i><span><strong>Correo electrónico</strong><br><small class="muted">robinsonelatin@gmail.com</small></span></a>
+            <a class="contact-link" href="https://wa.me/50247518310" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><span><strong>WhatsApp</strong><br><small class="muted">+502 4751-8310</small></span></a>
+            <a class="contact-link" href="tel:+50247518310"><i class="fa-solid fa-phone"></i><span><strong>Teléfono</strong><br><small class="muted">+502 4751-8310</small></span></a>
+            <a class="contact-link" href="https://github.com/robinsonlt" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span><strong>GitHub</strong><br><small class="muted">github.com/robinsonlt</small></span></a>
+          </div></div>
+          <div class="col-lg-7">
+            <div class="panel contact-form-panel">
+              <div class="contact-form-heading">
+                <div>
+                  <span class="contact-kicker"><i class="fa-regular fa-message me-2"></i>CONTACTO DIRECTO</span>
+                  <h3>Cuéntame sobre tu proyecto</h3>
+                  <p class="muted mb-0">Completa los datos y prepara un correo en unos segundos.</p>
+                </div>
+                <div class="contact-form-icon"><i class="fa-regular fa-paper-plane"></i></div>
+              </div>
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <div class="field-wrap"><i class="fa-regular fa-user"></i><input class="form-control" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" autocomplete="name" required></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="correo">Correo electrónico</label>
+                    <div class="field-wrap"><i class="fa-regular fa-envelope"></i><input class="form-control" id="correo" name="correo" type="email" placeholder="tunombre@correo.com" autocomplete="email" required></div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="mensaje">Mensaje</label>
+                    <div class="field-wrap field-wrap-textarea"><i class="fa-regular fa-comment-dots"></i><textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame brevemente qué tienes en mente..." required></textarea></div>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4">
+                    <small class="form-note"><i class="fa-solid fa-lock me-1"></i>Tu mensaje se prepara desde tu aplicación de correo.</small>
+                    <button class="btn-primary-custom contact-submit" type="submit">Preparar mensaje <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer"><span>© <span id="year"></span> Robinson Emanuel López Latín</span><span>Desarrollado con HTML, CSS, JavaScript y Bootstrap</span></footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', function(event){
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      const subject = `Contacto desde portafolio - ${nombre}`;
+      const body = `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`;
+      window.location.href = `mailto:robinsonelatin@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
 </body>
 </html>
